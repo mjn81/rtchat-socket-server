@@ -7,10 +7,10 @@ services:
     env_file:
       - .env
     ports:
-      - 5000:5000
-      - 5002:5002
+      - ${SOCKET_PORT}:${SOCKET_PORT}
+      - ${HTTP_PORT}:${HTTP_PORT}
     expose:
-      - 5000
+      - ${SOCKET_PORT}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 10s
