@@ -7,7 +7,6 @@ services:
       - .env
     ports:
       - ${SOCKET_PORT}:${SOCKET_PORT}
-      - ${HTTP_PORT}
     expose:
       - ${SOCKET_PORT}
     healthcheck:
